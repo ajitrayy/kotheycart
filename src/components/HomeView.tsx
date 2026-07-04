@@ -6,6 +6,10 @@ import {
   Map, ChefHat, HeartHandshake, ArrowRight, Instagram, Clock
 } from 'lucide-react';
 
+const prepImg = 'data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><rect width="100%25" height="100%25" fill="%23f8f4e8"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="36" fill="%23a27c3c">Prep%20Image</text></svg>';
+const tavernImg = 'data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><rect width="100%25" height="100%25" fill="%23f8f4e8"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="36" fill="%23a27c3c">Tavern%20Image</text></svg>';
+const heroImg = 'data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><rect width="100%25" height="100%25" fill="%23f8f4e8"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="36" fill="%23a27c3c">Hero%20Image</text></svg>';
+
 interface HomeViewProps {
   setActivePage: (page: ActivePage) => void;
   setSelectedCategory: (category: MenuCategory) => void;
@@ -54,17 +58,17 @@ export default function HomeView({ setActivePage, setSelectedCategory, addToCart
   // Gallery items using both generated assets and curated descriptions
   const galleryAssets = [
     {
-      src: '/src/assets/images/momo_folding_prep_1780854858011.png',
+      src: prepImg,
       title: 'The Artisanal Fold',
       desc: 'Pleating 12 delicate folds by hand'
     },
     {
-      src: '/src/assets/images/himalayan_tavern_1780854873898.png',
+      src: tavernImg,
       title: 'Cozy Hearth Tavern',
       desc: 'The copper steamers heating on high-fire coals'
     },
     {
-      src: '/src/assets/images/kothey_momo_hero_1780854841806.png',
+      src: heroImg,
       title: 'Signature Kothey',
       desc: 'Crispy lattice flat pan-fried bottom'
     }
@@ -135,8 +139,8 @@ export default function HomeView({ setActivePage, setSelectedCategory, addToCart
                 Freshly Steamed
               </div>
               <img 
-                src="/src/assets/images/kothey_momo_hero_1780854841806.png" 
-                alt="Seared Himalayan Kothey Momos" 
+                src={heroImg}
+                alt="Seared Himalayan Kothey Momos"
                 className="w-full h-auto object-cover rounded shadow-inner transform group-hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
@@ -208,7 +212,7 @@ export default function HomeView({ setActivePage, setSelectedCategory, addToCart
                 Kothey Momos – Most Selling
               </div>
               <img 
-                src="/src/assets/images/kothey_momo_hero_1780854841806.png" 
+                src={heroImg} 
                 alt="Signature Chicken Kothey Momo" 
                 className="w-full h-64 md:h-80 object-cover rounded transform group-hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
@@ -313,7 +317,7 @@ export default function HomeView({ setActivePage, setSelectedCategory, addToCart
                 DHARAMSHALA MEMOIRS
               </div>
               <img 
-                src="/src/assets/images/momo_folding_prep_1780854858011.png" 
+                src={prepImg} 
                 alt="Chef pleating traditional dumplings" 
                 className="w-full h-80 object-cover rounded shadow"
                 referrerPolicy="no-referrer"
