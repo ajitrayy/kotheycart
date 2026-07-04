@@ -1,0 +1,6 @@
+{
+  "name": "Kothey Cart",
+  "description": "Authentic Momos, Himalayan Heart. Premium Himalayan momo brand web experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
